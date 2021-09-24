@@ -1,0 +1,21 @@
+.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.titulo-h1 {
+  font-size: 30px;
+  color: #696bdb;
+  letter-spacing: 2px;
+}
+.titulo-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.todoCounter {
+  color: #31446c;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 2px;
+}

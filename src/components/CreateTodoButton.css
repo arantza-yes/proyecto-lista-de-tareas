@@ -1,0 +1,21 @@
+.buttonAgregar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.buttonAgregar__mas {
+  color: white;
+  border-radius: 20px;
+  padding: 10px 15px 10px 15px;
+  border: 0;
+  font-size: 16px;
+  text-align: center;
+  background-color: #696bdb;
+  cursor: pointer;
+}
+
+.buttonAgregar__mas strong {
+  font-size: 22px;
+}

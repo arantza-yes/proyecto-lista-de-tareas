@@ -1,0 +1,25 @@
+.TodoSearch {
+  display: flex;
+  justify-content: center;
+}
+.TodoSearch-input {
+  letter-spacing: 2px;
+  color: #31446c;
+  font-size: 13px;
+  text-align: center;
+  outline: none;
+  width: 200px;
+  height: 40px;
+  border: 0;
+  /* border: 1px solid #7c7fd5; */
+  border-radius: 10px;
+  background-color: #d8d9fb;
+}
+.TodoSearch-input:focus {
+  color: #31446c;
+
+  outline: none;
+}
+.TodoSearch-input::placeholder {
+  color: rgb(255, 255, 255);
+}
