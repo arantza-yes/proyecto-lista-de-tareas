@@ -10,7 +10,7 @@ function CreateTodoButton() {
     <React.Fragment>
       <section className="buttonAgregar">
         <button className="buttonAgregar__mas" onClick={onClickButton}>
-          <strong>+</strong> Agregar Más
+          <strong>+</strong> Agregar
         </button>
       </section>
     </React.Fragment>

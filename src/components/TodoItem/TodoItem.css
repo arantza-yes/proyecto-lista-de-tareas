@@ -1,5 +1,6 @@
 .TodoItem {
   /* background-color: #fafafa; */
+
   position: relative;
   display: flex;
   justify-content: center;
@@ -46,8 +47,21 @@
   color: #646464da;
   position: absolute;
   /* top: -24px; */
-  right: 0;
+  right: -10px;
+  /* padding: 0; */
+  /* padding: 0px 5px 0px 15px; */
 }
 .Icon-delete:hover {
   color: red;
+}
+
+.input-p {
+  border: 0;
+}
+.edit {
+  cursor: pointer;
+  text-decoration: none;
+  color: #f5a921;
+  font-size: 20px;
+  padding: 0px 10px 0px 5px;
 }
