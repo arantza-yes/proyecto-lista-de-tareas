@@ -1,8 +1,11 @@
 import React from 'react';
 import todoIcon from '../../images/todoIcon.png';
+import { TodoContext } from '../../TodoContext';
 import './TodoCounter.css';
 
-function TodoCounter({ totalTodos, completedTodos }) {
+function TodoCounter() {
+  const { totalTodos, completedTodos } = React.useContext(TodoContext);
+
   return (
     <React.Fragment>
       <header className="titulo">

@@ -14,8 +14,6 @@
   text-align: center;
   background-color: #696bdb;
   cursor: pointer;
-}
-
-.buttonAgregar__mas strong {
-  font-size: 22px;
+  position: relative;
+  z-index: 1;
 }

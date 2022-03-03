@@ -14,6 +14,8 @@ function TodoProvider(props) {
   } = useLocalStorage('TODOS_V1', []); // arriba traiamos la destructuracion con array y se cambiaba el nombre y normal funcionaba en array se puede, PERO cuadno traemos en objeto se trae el mismo nombre y se reempleza por el  nuevo valor que queremos usar, si queremos el mismo nombre lo dejamos igual
 
   const [searchValue, setSearchValue] = React.useState('');
+  //state for modal
+  const [openModal, setOpenModal] = React.useState(false);
 
   const completedTodos = todos.filter((todo) => todo.completed === true).length;
   const totalTodos = todos.length;
@@ -66,6 +68,8 @@ function TodoProvider(props) {
         filterTodos,
         onComplete,
         onDelete,
+        openModal,
+        setOpenModal,
       }}
     >
       {/*implicitamente devolvera a AppUi.js todo lo que tenga - para envolver todo lo que tenga TodoProvider */}

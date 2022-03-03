@@ -1,16 +1,20 @@
 import React from 'react';
 import './CreateTodoButton.css';
 
-function CreateTodoButton() {
+function CreateTodoButton(props) {
   const onClickButton = () => {
-    alert('aqui se abrira un modal');
+    props.setOpenModal(!props.openModal);
   };
 
   return (
     <React.Fragment>
       <section className="buttonAgregar">
         <button className="buttonAgregar__mas" onClick={onClickButton}>
-          <strong>+</strong> Agregar
+          {props.openModal ? (
+            <strong>Cancelar</strong>
+          ) : (
+            <strong>+ Agregar</strong>
+          )}
         </button>
       </section>
     </React.Fragment>
