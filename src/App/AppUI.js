@@ -7,6 +7,7 @@ import { TodoList } from '../components/TodoList/TodoList';
 import { TodoItem } from '../components/TodoItem/TodoItem';
 import { TodoContext } from '../TodoContext';
 import { Modal } from '../components/Modal';
+import { TodoForm } from '../components/TodoForm';
 
 function AppUI() {
   const {
@@ -17,6 +18,7 @@ function AppUI() {
     onDelete,
     openModal,
     setOpenModal,
+    updateTodo,
   } = React.useContext(TodoContext);
 
   return (
@@ -41,6 +43,7 @@ function AppUI() {
               completed={todo.completed}
               onComplete={() => onComplete(todo.text)}
               onDelete={() => onDelete(todo.text)}
+              updateTodo={updateTodo}
             />
           ))}
         </TodoList>
@@ -51,7 +54,7 @@ function AppUI() {
       {/** el doble && en javascritp signfica que si es true entonces hace algo ------ !! que exista openModal y que sea true -> es falso que openModal no existe? falso, si existe -- es falso que openModal no es true? falso si es true, entonces falso y falso hacen true */}
       {!!openModal && (
         <Modal>
-          <p>Modal</p>
+          <TodoForm />
         </Modal>
       )}
     </React.Fragment>

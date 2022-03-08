@@ -56,6 +56,22 @@ function TodoProvider(props) {
     saveTodos(newtodos);
   };
 
+  const addTodo = (text) => {
+    const newtodos = [...todos];
+    newtodos.push({
+      completed: false,
+      text,
+    });
+    saveTodos(newtodos);
+  };
+
+  const updateTodo = (textBefore, textAfter) => {
+    const compara = todos.findIndex((todo) => todo.text === textBefore);
+    const newtodos = [...todos];
+    newtodos[compara].text = textAfter;
+    saveTodos(newtodos);
+  };
+
   return (
     <TodoContext.Provider
       value={{
@@ -68,6 +84,8 @@ function TodoProvider(props) {
         filterTodos,
         onComplete,
         onDelete,
+        addTodo,
+        updateTodo,
         openModal,
         setOpenModal,
       }}

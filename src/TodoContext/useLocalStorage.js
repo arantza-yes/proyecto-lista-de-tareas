@@ -30,7 +30,7 @@ const useLocalStorage = (itemName, initialValue) => {
         setError(error); // aqui mostrarmos el error osea actualizamos el Error con setError con el error que manda el catch
       }
     }, 1000);
-    console.log('useefect');
+    // console.log('useefect');
   }, []);
 
   //persiste los datos para completar y eliminar to dos con la nueva actualizacion newTodos
